@@ -45,10 +45,59 @@ npm install
 # Start Metro Bundler
 npx react-native start
 
-npm start also work
+npm start #also work
 
 # Run on Android
 npx react-native run-android
 
 # Run on iOS (Mac only)
 npx react-native run-ios
+```
+
+## 📁 Folder Structure
+```
+src/
+├── assets/
+├── components/
+├── navigation/
+├── screens/
+├── services/
+├── utils/
+└── App.js
+```
+
+✅ To-Do (Milestones)
+
+ Auth UI (Google/Email/Mobile)
+
+ Study Plan Logic
+
+ Reading Timer + Alarm
+
+ Room-based Study Time Tracking
+
+ Profile & Community Chat
+
+ Notification System
+
+ Admin Panel for Event Push
+
+ Premium Features (E-books, Analytics)
+
+## 🙌 Contributing
+
+Fork the project
+
+Create your feature branch: git checkout -b feature/awesome-feature
+
+Commit your changes: git commit -m 'Add new feature'
+
+Push to the branch: git push origin feature/awesome-feature
+
+Open a pull request
+
+### 📧 Contact
+
+Developer: Musharaf Shaik
+📍 Guntur, Andhra Pradesh
+📬 tiaiworkk@gmail.com
