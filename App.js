@@ -25,7 +25,7 @@ import {
   MessageCircle
 } from 'react-native-feather';
 import ReadingModeScreen from './screens/ReadingScreen';
-import TimeTable from './screens/TimeTable';
+import {TimeTable} from './screens/TimeTable';
 
 // Colors
 const colors = {
