@@ -1,0 +1,265 @@
+.todo-screen {
+  min-height: 100vh;
+  background-color: #ffffff;
+}
+
+.screen-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px;
+  border-bottom: 1px solid #E5E7EB;
+}
+
+.screen-title {
+  font-size: 24px;
+  font-weight: bold;
+  color: #111827;
+  margin: 0;
+}
+
+.add-todo-button {
+  background: #3B82F6;
+  color: white;
+  border: none;
+  width: 40px;
+  height: 40px;
+  border-radius: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.add-todo-button:hover {
+  background: #2563EB;
+  transform: scale(1.05);
+}
+
+.filter-section {
+  padding: 16px 20px;
+  border-bottom: 1px solid #F3F4F6;
+}
+
+.filter-buttons {
+  display: flex;
+  gap: 8px;
+  overflow-x: auto;
+  padding-bottom: 4px;
+}
+
+.filter-button {
+  background: #F8FAFC;
+  border: 1px solid #E2E8F0;
+  color: #64748B;
+  padding: 8px 16px;
+  border-radius: 20px;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+
+.filter-button:hover {
+  background: #F1F5F9;
+  border-color: #CBD5E1;
+}
+
+.filter-button.active {
+  background: #3B82F6;
+  border-color: #3B82F6;
+  color: white;
+}
+
+.todo-list {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.todo-item {
+  display: flex;
+  align-items: flex-start;
+  padding: 20px;
+  border: 1px solid #E5E7EB;
+  border-radius: 12px;
+  background: #ffffff;
+  transition: all 0.2s ease;
+}
+
+.todo-item:hover {
+  border-color: #D1D5DB;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.todo-item.completed {
+  opacity: 0.7;
+  background: #F9FAFB;
+}
+
+.todo-subject-container {
+  margin-right: 16px;
+  flex-shrink: 0;
+}
+
+.subject-circle {
+  width: 40px;
+  height: 40px;
+  border-radius: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.subject-letter {
+  color: white;
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.todo-details {
+  flex: 1;
+  margin-right: 16px;
+}
+
+.todo-subject {
+  font-size: 16px;
+  font-weight: 600;
+  color: #111827;
+  margin: 0 0 4px 0;
+}
+
+.todo-item.completed .todo-subject {
+  text-decoration: line-through;
+  color: #6B7280;
+}
+
+.todo-time {
+  font-size: 14px;
+  color: #6B7280;
+  margin: 0 0 8px 0;
+}
+
+.todo-description {
+  font-size: 14px;
+  color: #374151;
+  margin: 0 0 8px 0;
+  line-height: 1.4;
+}
+
+.todo-meta {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.priority-badge {
+  padding: 2px 8px;
+  border-radius: 12px;
+  font-size: 12px;
+  font-weight: 500;
+  text-transform: uppercase;
+}
+
+.priority-badge.high {
+  background: #FEE2E2;
+  color: #991B1B;
+}
+
+.priority-badge.medium {
+  background: #FEF3C7;
+  color: #92400E;
+}
+
+.priority-badge.low {
+  background: #DCFCE7;
+  color: #166534;
+}
+
+.todo-actions {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 8px;
+  flex-shrink: 0;
+}
+
+.todo-today {
+  font-size: 12px;
+  color: #6B7280;
+  margin: 0;
+  text-align: right;
+}
+
+.todo-checkbox {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 4px;
+  border-radius: 4px;
+  transition: all 0.2s ease;
+}
+
+.todo-checkbox:hover {
+  background: #F3F4F6;
+}
+
+.check-icon {
+  color: #D1D5DB;
+  transition: color 0.2s ease;
+}
+
+.check-icon.completed {
+  color: #10B981;
+}
+
+.empty-state {
+  text-align: center;
+  padding: 60px 20px;
+}
+
+.empty-icon {
+  font-size: 48px;
+  margin-bottom: 16px;
+}
+
+.empty-title {
+  font-size: 20px;
+  font-weight: 600;
+  color: #111827;
+  margin: 0 0 8px 0;
+}
+
+.empty-description {
+  font-size: 16px;
+  color: #6B7280;
+  margin: 0;
+}
+
+/* Desktop styles */
+@media (min-width: 1024px) {
+  .todo-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    gap: 20px;
+  }
+  
+  .todo-item {
+    margin-bottom: 0;
+  }
+}
+
+/* Tablet styles */
+@media (min-width: 768px) and (max-width: 1023px) {
+  .todo-list {
+    padding: 32px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 20px;
+  }
+}

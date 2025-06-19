@@ -1,0 +1,89 @@
+.progress-bar-container {
+  width: 100%;
+}
+
+.progress-label {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 8px;
+  font-size: 14px;
+  font-weight: 500;
+  color: #374151;
+}
+
+.progress-bar-track {
+  width: 100%;
+  border-radius: 4px;
+  overflow: hidden;
+  position: relative;
+}
+
+.progress-bar-fill {
+  border-radius: 4px;
+  transition: width 0.3s ease;
+  position: relative;
+}
+
+.progress-bar-track.striped .progress-bar-fill {
+  background-image: linear-gradient(
+    45deg,
+    rgba(255, 255, 255, 0.15) 25%,
+    transparent 25%,
+    transparent 50%,
+    rgba(255, 255, 255, 0.15) 50%,
+    rgba(255, 255, 255, 0.15) 75%,
+    transparent 75%,
+    transparent
+  );
+  background-size: 1rem 1rem;
+}
+
+.progress-bar-track.animated .progress-bar-fill {
+  animation: progress-bar-stripes 1s linear infinite;
+}
+
+@keyframes progress-bar-stripes {
+  0% {
+    background-position: 1rem 0;
+  }
+  100% {
+    background-position: 0 0;
+  }
+}
+
+/* Variants */
+.progress-bar-container.success .progress-bar-fill {
+  background-color: #10B981;
+}
+
+.progress-bar-container.warning .progress-bar-fill {
+  background-color: #F59E0B;
+}
+
+.progress-bar-container.error .progress-bar-fill {
+  background-color: #EF4444;
+}
+
+.progress-bar-container.info .progress-bar-fill {
+  background-color: #3B82F6;
+}
+
+/* Sizes */
+.progress-bar-container.small .progress-bar-track {
+  height: 4px;
+}
+
+.progress-bar-container.medium .progress-bar-track {
+  height: 8px;
+}
+
+.progress-bar-container.large .progress-bar-track {
+  height: 12px;
+}
+
+/* Rounded variants */
+.progress-bar-container.rounded .progress-bar-track,
+.progress-bar-container.rounded .progress-bar-fill {
+  border-radius: 50px;
+}
